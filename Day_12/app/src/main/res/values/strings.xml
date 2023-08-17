@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment_1</string>
+    <string name="home_page">Welcome to @asgar72 knowledge hub</string>
+    <string name="android1">Android development involves creating applications for the Android operating system, initially developed by Android Inc., then acquired by Google in 2005. Using Java and later Kotlin programming languages, developers build diverse apps for smartphones, tablets, and other devices. Android open ecosystem and widespread adoption have made it a dominant platform in mobile technology.</string>
+    <string name="ios">iOS development refers to creating applications for Apples mobile operating system, iOS. Launched in 2007, iOS is known for its user-friendly interface and robust security. Developers use languages like Swift and Objective-C, along with Xcode IDE. It has led to a vast ecosystem of apps, transforming how we interact, work, and play on our smartphones and tablets.</string>
+    <string name="web">Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet i.e. websites. \n The word Web Development is made up of two words, that is:
+ Web: It refers to websites, web pages or anything that works over the internet.
+ Development: It refers to building the application from scratch.</string>
+    <string name="ML">Machine Learning is the field of study that gives computers the capability to learn without being explicitly programmed. ML is one of the most exciting technologies that one would have ever come across. As it is evident from the name, it gives the computer that makes it more similar to humans: The ability to learn. Machine learning is actively being used today, perhaps in many more places than one would expect.</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Asif's Cafe"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#e74c3c"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/edt1"
+        android:background="@drawable/back_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter order 1"/>
+
+    <EditText
+        android:id="@+id/edt2"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/back_des"
+        android:padding="10dp"
+        android:inputType="textPersonName"
+        android:hint="Enter order 2" />
+
+    <EditText
+        android:id="@+id/edt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/back_des"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:inputType="textPersonName"
+        android:hint="Enter order 3" />
+
+    <EditText
+        android:id="@+id/edt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/back_des"
+        android:layout_margin="15dp"
+        android:inputType="textPersonName"
+        android:hint="Enter order 4" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="match_parent"
+        android:layout_margin="35dp"
+        android:background="@drawable/back_des"
+        android:layout_height="wrap_content"
+        android:text="Order Now"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
