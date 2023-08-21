@@ -1,9 +1,11 @@
 package com.asgar72.database
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
@@ -21,6 +23,13 @@ class MainActivity : AppCompatActivity() {
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val etUserName = findViewById<EditText>(R.id.etUserName)
         val btnSignUp = findViewById<Button>(R.id.btnSignUp)
+        val txtsignin = findViewById<TextView>(R.id.txtsignin)
+
+        txtsignin.setOnClickListener {
+            intent = Intent(this,SignInActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         btnSignUp.setOnClickListener {
             val name = etName.text.toString()

@@ -24,20 +24,6 @@
             android:textStyle="bold"
             android:textColor="@color/txtcolor"/>
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/btn_back"
-            android:drawableLeft="@drawable/password"
-            android:drawablePadding="10dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
 
         <EditText
             android:id="@+id/etUserName"
@@ -49,13 +35,13 @@
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Unique ID"
-            android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
+
         <Button
-            android:id="@+id/btnSignUp"
+            android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -81,6 +67,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"/>
         <TextView
+            android:id="@+id/txtsignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
@@ -93,10 +80,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="-------------- OR ---------------"
+            android:text="----- OR -----"
             android:layout_margin="15dp"
             android:gravity="center"
-            android:textColor="#0984e3"
+            android:textColor="@color/white"
             android:textSize="19sp"/>
 
     </LinearLayout>
