@@ -24,9 +24,12 @@ android {
         }
     }
 
+    //view bindings..........
     buildFeatures {
         viewBinding = true
     }
+    //view bindings..........
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
