@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.listView.setOnItemClickListener { parent, view, position, id ->
 
-            val text = "Clicked on Item : " + (view as TextView).text.toString()
+            val text = "Clicked on : " + (view as TextView).text.toString()
             Toast.makeText(this,text,Toast.LENGTH_SHORT).show()
         }
 
