@@ -1,5 +1,6 @@
 package com.asgar72.day22_project2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -9,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        supportActionBar?.hide()
         val name = arrayOf("Irshad","Neeraj","SRK","Asgar","Shajar")
         val lastMsg = arrayOf("Hello bro","Good Morning","Hii ..","Yes bro","I'm fine.")
         val lastMsgTime = arrayOf("11:30 AM","8:10 AM","02:00 PM","10:50 PM","10:59 PM")
@@ -27,6 +28,19 @@ class MainActivity : AppCompatActivity() {
 
         listView.isClickable =true
         listView.adapter= MyAdapter(this,userArrayList)
+
+        listView.setOnItemClickListener { parent, view, position, id ->
+            //open new activity and pass the data
+            val userName = name[position]
+            val userPhone = phoneNumber[position]
+            val imageid = imgId[position]
+
+            val i = Intent(this,UserActivity::class.java)
+            i.putExtra("name",userName)
+            i.putExtra("phone",userPhone)
+            i.putExtra("imageid",imageid)
+            startActivity(i)
+        }
 
     }
 }
