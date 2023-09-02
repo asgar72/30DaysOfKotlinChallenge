@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment_1</string>
+    <string name="app_name">Day_12</string>
     <string name="home_page">Welcome to @asgar72 knowledge hub</string>
     <string name="android1">Android development involves creating applications for the Android operating system, initially developed by Android Inc., then acquired by Google in 2005. Using Java and later Kotlin programming languages, developers build diverse apps for smartphones, tablets, and other devices. Android open ecosystem and widespread adoption have made it a dominant platform in mobile technology.</string>
     <string name="ios">iOS development refers to creating applications for Apples mobile operating system, iOS. Launched in 2007, iOS is known for its user-friendly interface and robust security. Developers use languages like Swift and Objective-C, along with Xcode IDE. It has led to a vast ecosystem of apps, transforming how we interact, work, and play on our smartphones and tablets.</string>
