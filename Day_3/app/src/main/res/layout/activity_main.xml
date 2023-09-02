@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,39 +13,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="ImageView and TextView \nand ScrollView Uses"
+        android:text="Toast Text Uses"
         android:textColor="#CD1515"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
 
-    <ImageView
+    <Button
+        android:id="@+id/btnDownload"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:src="@drawable/asgar" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Downlaod"
+        android:textAllCaps="false" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_margin="10dp"
-            android:lineSpacingExtra="2dp"
-            android:paddingBottom="20dp"
-            android:text="@string/text1"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </ScrollView>
-
-    <ImageView
+    <Button
+        android:id="@+id/btnUpload"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:src="@drawable/asgar" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Upload"
+        android:textAllCaps="false" />
 
 
 </LinearLayout>

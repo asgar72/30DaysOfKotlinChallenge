@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.asgar72.textviewandscrollview'
+    namespace 'com.asgar72.first_day'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.asgar72.textviewandscrollview"
+        applicationId "com.asgar72.first_day"
         minSdk 25
         targetSdk 33
         versionCode 1

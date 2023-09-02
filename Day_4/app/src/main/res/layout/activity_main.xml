@@ -6,33 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/teal_700">
+    android:id="@+id/layout"
+    android:gravity="center">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Explicit Intent Uses"
+        android:text="Background Color change"
         android:textColor="#CD1515"
         android:textSize="25sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="First Page"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="45sp"
-        android:textColor="@color/black"
-        android:layout_margin="50dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Dark"
         android:layout_gravity="center"
-        android:text="Click Me"
-        android:id="@+id/btn1"
-        android:textAllCaps="false"
-        android:textSize="15sp"/>
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:id="@+id/btnDark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:id="@+id/btnRed"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:id="@+id/btnBlue"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yellow"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:id="@+id/btnYellow"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pink"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:id="@+id/btnPink"/>
+
+
 </LinearLayout>

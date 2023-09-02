@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.asgar72.explicitintent'
+    namespace 'com.asgar72.interactiveapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.asgar72.explicitintent"
+        applicationId "com.asgar72.interactiveapp"
         minSdk 25
         targetSdk 33
         versionCode 1
