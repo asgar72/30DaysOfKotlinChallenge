@@ -12,16 +12,16 @@ class UserActivity : AppCompatActivity() {
         supportActionBar?.hide()
         val name = intent.getStringExtra("name")
         val phone = intent.getStringExtra("phone")
-        val imgId = intent.getIntExtra("imageid",R.drawable.asgar)
+        val imgId = intent.getIntExtra("imageid", R.drawable.asgar)
 
         val nameTv = findViewById<TextView>(R.id.tvname)
         val phoneTv = findViewById<TextView>(R.id.tvNumber)
         val imageId = findViewById<CircleImageView>(R.id.profile_image)
         val txtname = findViewById<TextView>(R.id.txtname)
 
-        nameTv.text=name
-        phoneTv.text=phone
+        nameTv.text = name
+        phoneTv.text = phone
         imageId.setImageResource(imgId)
-        txtname.text=name
+        txtname.text = name
     }
 }
