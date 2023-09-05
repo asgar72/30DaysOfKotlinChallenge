@@ -15,9 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.hide()
+
         myRecyclerView = findViewById(R.id.recyclerView)
 
-        var newsArrayList = arrayOf(
+        var newsImageArray = arrayOf(
             R.drawable.img1,
             R.drawable.img2,
             R.drawable.img3,
@@ -39,6 +41,14 @@ class MainActivity : AppCompatActivity() {
 
         // to set arrangement of recyclerView .like vertically or horizontally
         myRecyclerView.layoutManager = LinearLayoutManager(this)
+        newsArrayList = arrayListOf<News>()
+
+        for ( index in newsImageArray.indices){
+            val news = News(newsHeadingArray[index],newsImageArray[index])
+            newsArrayList.add(news)
+        }
+
+        myRecyclerView.adapter =  MyAdapter(newsArrayList,this)
 
     }
 }
