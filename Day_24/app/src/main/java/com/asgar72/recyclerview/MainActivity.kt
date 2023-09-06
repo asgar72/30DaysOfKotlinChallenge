@@ -1,6 +1,7 @@
 package com.asgar72.recyclerview
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -39,16 +40,37 @@ class MainActivity : AppCompatActivity() {
             "Actress Silvina Luna dies after plastic surgery mishap"
         )
 
+        val newsContent = arrayOf(
+            getString(R.string.Inews),getString(R.string.IInews),getString(R.string.IIInews),
+            getString(R.string.IVnews),getString(R.string.Vnews),getString(R.string.VInews),
+            getString(R.string.VIInews)
+
+        )
+
         // to set arrangement of recyclerView .like vertically or horizontally
         myRecyclerView.layoutManager = LinearLayoutManager(this)
         newsArrayList = arrayListOf<News>()
 
         for ( index in newsImageArray.indices){
-            val news = News(newsHeadingArray[index],newsImageArray[index])
+            val news = News(newsHeadingArray[index],newsImageArray[index],newsContent[index])
             newsArrayList.add(news)
         }
 
-        myRecyclerView.adapter =  MyAdapter(newsArrayList,this)
+        var myAdapter  = MyAdapter(newsArrayList,this)
+        myRecyclerView.adapter = myAdapter
+
+        myAdapter.setOnItemClickListener(object : MyAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+            // on click each item, what action do you want to perform
+
+                val intent = Intent(applicationContext,NewsDetailActivity::class.java)
+                intent.putExtra("heading",newsArrayList[position].newsHeading)
+                intent.putExtra("imageId",newsArrayList[position].newsImage)
+                intent.putExtra("newsContent",newsArrayList[position].newContent)
+                startActivity(intent)
+            }
+
+        })
 
     }
 }
