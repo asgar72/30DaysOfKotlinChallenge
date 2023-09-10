@@ -4,16 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var myAdapter: MyAdapter
+    lateinit var recyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
-
+        recyclerView = findViewById(R.id.recyclerView)
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://dummyjson.com/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -27,18 +32,12 @@ class MainActivity : AppCompatActivity() {
                 // if api call is a success, then use the data of API and show in your app
                 var responseBody = response.body()
                 val productList = responseBody?.products!!
-                //!! this is work as if conditions
 
-                val collectDataInSB = StringBuilder()
+                myAdapter = MyAdapter(this@MainActivity,productList)
+                recyclerView.adapter = myAdapter
+                recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
 
-                for (myData in productList) {
-                    collectDataInSB.append(myData.title + "\n ")
-                }
-
-                val tv = findViewById<TextView>(R.id.textView)
-                tv.text = collectDataInSB
             }
-
             override fun onFailure(call: Call<MyData?>, t: Throwable) {
                 // if api call fails
                 Log.d("Main Activity", "onFailure" + t.message)
