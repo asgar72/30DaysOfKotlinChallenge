@@ -4,7 +4,6 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
@@ -16,10 +15,12 @@ RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var title : TextView
         var image : ShapeableImageView
+        val star: TextView
 
         init {
                 title = itemView.findViewById(R.id.productTittle)
                 image = itemView.findViewById(R.id.productImg)
+                star = itemView.findViewById(R.id.ratings)
         }
     }
 
@@ -38,6 +39,7 @@ RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
         // image view , how to show image in image view if the image is in from of url ,
         // then use 3rd part library Picasso
         Picasso.get().load(currentItem.thumbnail).into(holder.image);
+        holder.star.text = "Rating: ${currentItem.rating.toString()}"
     }
 
 }

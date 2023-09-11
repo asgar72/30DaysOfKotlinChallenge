@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
             .create(ApiInterface::class.java)
 
         val retrofitData = retrofitBuilder.getProductData()
-
+        //ctrl + shift + space
+        //retrofitData class create
         retrofitData.enqueue(object : Callback<MyData?> {
             override fun onResponse(call: Call<MyData?>, response: Response<MyData?>) {
                 // if api call is a success, then use the data of API and show in your app
