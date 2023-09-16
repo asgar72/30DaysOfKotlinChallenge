@@ -16,13 +16,11 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold" />
-
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:background="#9F9C9C" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,6 +53,12 @@
             android:text="Validate" />
 
     </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#9F9C9C" />
+
 
     <FrameLayout
         android:id="@+id/frameLayout"
